@@ -21,7 +21,7 @@ while(True):
 		continue
 	val = dataChannel.read()
 	z = str(binascii.b2a_hex(val))
-	z = z[8:10]+z[6:8]+z[4:6]+z[2:4]
+	z = z[8:10] + z[6:8] + z[4:6] + z[2:4]
 	print("\nReceived: ", z.lstrip("0"), "\tDecimal value: ", int(z, 16))
 	print("Sending ACK for", z.lstrip("0"), "\n")
 	for i in range(len(z.lstrip("0"))):
